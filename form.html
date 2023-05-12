@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MANNS Demo Request System</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+    h1 {
+      font-size: 60px;
+      font-weight: 600;
+      text-align: center;
+      width: 800px;
+      margin: auto;
+    }
+    h2 {
+      text-decoration-line: underline;
+      font-size: 35px;
+      font-weight: 300;
+      text-align: left;
+      width: 800px;
+      margin: auto;
+      margin-bottom: 10px
+
+    }
+    section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+    fieldset {
+      border-radius: 5px;
+      border: none;
+      background-color: rgb(164, 190, 24);
+      padding: 20px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 0px;
+      box-sizing: border-box;
+    }
+    input[type="date"] {
+      width: 20%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 0px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: rgb(164, 190, 24);
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+    }
+    input[type="submit"]:hover {
+      background-color: white;
+      color: rgb(164, 190, 24);
+    }
+  </style>
+  <script src="salesmen.js"></script>
+</head>
+
+<body>
+  <h1>MANNS
+  <br>Demo Request System</h1>
+  <form>
+    <section>
+      <fieldset>
+  <h2>Salesman Details</h2>
+
+      <label for="branch">Branch:</label>
+      <select id="branch" name="branch" onchange="updateSalesmen()" required>
+        <option value="">-- Select Branch --</option>
+        <option value="Essex">Essex</option>
+        <option value="Halesworth">Halesworth</option>
+        <option value="Kent">Kent</option>
+        <option value="Market Harborough">Market Harborough</option>
+        <option value="Norfolk">Norfolk</option>
+        <option value="Saxham">Saxham</option>
+        <option value="Spaldwick">Spaldwick</option>
+      </select>
+
+      <br><br>
+
+      <label for="salesman">Salesman:</label>
+      <select id="salesman" name="salesman" required>
+        <option value="">-- Select Salesman --</option>
+      </select>
+    </fieldset>
+  </section>
+
+    <section>
+      <fieldset>
+      <h2>Machine Required</h2>
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" name="brand" required>
+
+      <br><br>
+
+      <label for="machine">Machine:</label>
+      <input type="text" id="machine" name="machine" required>
+
+      <br><br>
+
+      <label for="machinePurpose">What will machine be doing:</label>
+      <input type="text" id="machinePurpose" name="machinePurpose" required>
+
+      <br><br>
+
+      <label for="additionalEquipment">Additional Equipment:</label>
+      <input type="text" id="additionalEquipment" name="additionalEquipment">
+
+      <br><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+    </fieldset>
+    </section>
+
+    <section>
+    <fieldset>
+      <h2>Customer Details</h2>
+      <label for="contactName">Contact Name:</label>
+      <input type="text" id="contactName" name="contactName" required>
+
+      <br><br>
+      <label for="farmName">Farm Name:</label>
+      <input type="text" id="farmName" name="farmName" required>
+
+      <br><br>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <br><br>
+
+      <label for="postcode">Postcode:</label>
+<input type="text" id="postcode" name="postcode" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][A-Za-z]{2}" required>
+
+
+      <br><br>
+
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+      <br><br>
+
+      <label for="officeNumber">Office Number:</label>
+      <input type="tel" id="officeNumber" name="officeNumber" required>
+
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="Enter Customer email">
+
+
+    </fieldset>
+    </section>
+
+      <input type="submit" value="Submit">
